@@ -1,18 +1,15 @@
 {
-  "name": "sass-layout",
+  "name": "mahendra",
   "version": "1.0.0",
-  "description": "mgkd-Sass-Layout",
+  "description": "sass-layout-mgkd",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "node-sass assets/sass/main.scss assets/css/main.css -w"
   },
   "author": "Mahendra",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^7.0.1"
-  },
-  "devDependencies": {
-    "node-sass": "^6.0.0"
+    "font-awesome": "^4.7.0"
   }
-  
 }
