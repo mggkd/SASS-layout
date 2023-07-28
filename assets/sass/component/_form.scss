@@ -1,58 +1,51 @@
 .form{
-    &-group{
-        &:not(:last-child){
-            margin-bottom: 2rem;
-        }
+    &-group:not(:last-child){
+        margin-bottom: 2rem;
     }
+
     &-control{
         width: 90%;
         display: block;
-        padding: 1.5rem;
+        padding: 1.5rem 2rem;
         color: inherit;
         font-family: inherit;
-        border-radius: 0.2rem;
+        border-radius: 2px;
         border: none;
-        border-bottom: .3rem solid transparent;
-        outline: none;
-        transition: all 0.3s;
-        @include response(phone){
-            width: 100%;
-        }
+        transition: all .3s;
+        border-bottom: 3px solid transparent;
         &:focus{
+            outline: none;
             box-shadow: 0 1rem 2rem rgba($color-dark, .1);
-            border-bottom: .3rem solid $color-primary;
+            border-bottom: 3px solid $color-primary;
         }
         &:focus:invalid{
-            border-bottom: .3rem solid $color-secondary-dark;
+            border-bottom: 3px solid $color-secondary-dark;
         }
         &::placeholder{
-            color: rgba($color-grey-dark, .3);
+            color: $color-grey-light-2 ;
         }
         &::-webkit-input-placeholder{
-            color: rgba($color-grey-dark, .3);
+            color: $color-grey-light-2 ;
         }
     }
     &-label{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 700;
         display: block;
-        margin: .7rem 0 0 1.5rem;
-        transition: all 0.4s;
+        margin: .7rem 0 0 2rem;
+        transition: all .3s;
     }
+
     &-control:placeholder-shown + &-label{
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
     }
+
     &-radio-group{
         width: 49%;
         display: inline-block;
-        @include response(phone){
-            width: 100%;
-            &:not(:last-child){
-                margin-bottom: 1.5rem;
-            }
-        }
+
     }
     &-radio-control{
         display: none;
@@ -67,22 +60,23 @@
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-        border: .5rem solid $color-primary;
+        border: 5px solid $color-primary;
         display: inline-block;
         position: absolute;
         left: 0;
-        top: -.5rem;
+        top:-4px;
         &::after{
             content: '';
             height: 1.3rem;
             width: 1.3rem;
             border-radius: 50%;
-            background-color: $color-primary;
             @include toCenter;
+            background-color: $color-primary;
             opacity: 0;
         }
     }
     &-radio-control:checked ~ &-radio-label &-radio-btn::after{
         opacity: 1;
     }
-}
+} 
+

@@ -1,95 +1,98 @@
 .card {
-    height: 53rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    -o-perspective: 150rem;
     position: relative;
-
+    height: 52rem;
     &-side {
-        background-color: orange;
-        height: 53rem;
-        transition: all 1s ease-in-out;
-        -webkit-backface-visibility: hidden;
+        transition: all 0.8s;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
         position: absolute;
-        left: 0;
+        height: 52rem;
         top: 0;
+        left: 0;
         width: 100%;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
-
         &-front {
             background-color: $color-white;
         }
-
         &-back {
             background-color: blueviolet;
             transform: perspective(150rem) rotateY(180deg);
-            &-1{
+            &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
-            &-2{
+            &-2 {
                 background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
-            &-3{
+            &-3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
-    &:hover &-side-front{
+    &:hover &-side-front {
         transform: perspective(150rem) rotateY(-180deg);
     }
-    &:hover &-side-back{
+    &:hover &-side-back {
         transform: perspective(150rem) rotateY(0deg);
     }
-    &-img{
+    &-img {
         height: 23rem;
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         background-size: cover;
-        &-1{
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../images/nat-5.jpg);
+        &-1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                url(../images/nat-5.jpg);
         }
-        &-2{
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../images/nat-6.jpg);
+        &-2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+                url(../images/nat-6.jpg);
         }
-        &-3{
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../images/nat-7.jpg);
+        &-3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+                url(../images/nat-7.jpg);
         }
     }
-    &-heading{
+    &-heading {
         font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
         text-align: right;
         color: $color-white;
         position: absolute;
-        top: 13rem;
+        top: 12rem;
         right: 2rem;
-        width: 70%;
-        &-span{
+        width: 75%;
+        &-span {
             padding: 1rem 1.5rem;
             -webkit-box-decoration-break: clone;
             box-decoration-break: clone;
-            &-1{
+            &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
             }
-            &-2{
+            &-2 {
                 background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
             }
-            &-3{
+            &-3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
         }
     }
-    &-details{
+    &-details {
         padding: 3rem;
-        ul{
+        ul {
             list-style: none;
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
             li{
+                font-size: 1.5rem;
                 padding: 1rem;
                 &:not(:last-child){
-                    border-bottom: 0.1rem solid $color-grey-light-2;
+                    border-bottom: 1px solid $color-grey-light-2;
                 }
             }
         }
@@ -97,14 +100,15 @@
 
     &-cta{
         // position: absolute;
-        // top: 50%;
         // left: 50%;
+        // top: 50%;
         // transform: translate(-50%, -50%);
         @include toCenter;
-        width: 90%;
         text-align: center;
+        width: 90%;
+      
     }
-    &-prize{
+    &-price{
         color: $color-white;
         margin-bottom: 8rem;
         &-only{
@@ -115,4 +119,5 @@
             font-weight: 100;
         }
     }
+   
 }

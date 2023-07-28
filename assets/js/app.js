@@ -1,13 +1,8 @@
-let cl = console.log;
 
-const navigation = document.getElementById("navigation");
-const navToggle = document.getElementById("nav-toggle");
-
-
-const onClickHandler = () =>{
-    navigation.classList.toggle("active");
-}
+const nav = document.getElementById('navigation')
+const navToggle = document.getElementById('navToggle')
 
 
-
-navToggle.addEventListener("click", onClickHandler);
+navToggle.addEventListener('click', function(){
+    nav.classList.toggle('active')
+})

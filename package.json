@@ -6,9 +6,13 @@
   "scripts": {
     "compile:sass": "node-sass assets/sass/main.scss assets/css/main.css -w"
   },
-  "author": "Akshay",
+  "author": "Mahendra",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.0"
   }
+  
 }
